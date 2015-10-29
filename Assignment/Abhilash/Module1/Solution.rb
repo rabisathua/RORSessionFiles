@@ -10,13 +10,15 @@ class Solution
           File.open("textfile.txt") do |f|
           f.each_line do |line|
            linecount+=1
-          a.calculate_word_frequency(line,linecount)
+         collect=a.calculate_word_frequency(line,linecount)
+          puts "The highest number of times a word appered: #{collect} "
         end
     end
 
       file = File.open("textfile.txt")
       contents = file.read
-      a.highest_word_frequency(contents)
+      take=a.highest_word_frequency(contents)
+       puts "\n Highest frequency word among all lines:\n #{take}"
     end
          
 end
